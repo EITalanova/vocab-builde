@@ -1,7 +1,11 @@
+import { RegisterForm } from "../components/RegisterForm/RegisterForm";
+
+
 const Register = () => {
   return (
       <div>
-      Register
+
+      <RegisterForm />
       </div>
   );
 };
