@@ -26,7 +26,7 @@ function App() {
             // </PrivateRoute>
           }
         />
-      </Route>
+      
 
       <Route
           path="/register"
@@ -46,7 +46,7 @@ function App() {
             // </PrivateRoute>
           }
         />
-      
+      </Route>
     </Routes>
   );
 }
