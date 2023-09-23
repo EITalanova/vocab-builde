@@ -9,9 +9,9 @@ import "../css/App.css";
 
 const Main = lazy(() => import("../pages/Main"));
 // const Dictionary = lazy(() => import("../pages/Dictionary"));
-const Login = lazy(() => import("../pages/Login"));
+const Login = lazy(() => import("../pages/Login/Login"));
 // const Recomend = lazy(() => import("../pages/Recomend"));
-const Register = lazy(() => import("../pages/Register"));
+const Register = lazy(() => import("../pages/Register/Register"));
 // const Training = lazy(() => import("../pages/Training"));
 
 function App() {

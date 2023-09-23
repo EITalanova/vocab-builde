@@ -1,4 +1,4 @@
-.regFormContainer {
+.logFormContainer {
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -9,14 +9,15 @@
   background-color: var(--bcgGreen);
 }
 
-.regFormTextBox {
+.logFormTextBox {
   text-align: start;
+    margin-bottom: 24px;
 
   font-size: 18px;
   font-weight: 500;
 }
 
-.regFormTitle {
+.logFormTitle {
   margin-bottom: 16px;
   font-size: 30px;
   font-weight: 600;
@@ -24,7 +25,7 @@
   letter-spacing: -0.6px;
 }
 
-.regFormDiscr {
+.logFormDiscr {
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -32,14 +33,14 @@
   color: var(--mainGrey);
 }
 
-.regFormBox {
+.logFormBox {
   display: flex;
   width: 100%;
   flex-direction: column;
   gap: 14px;
 }
 
-.regFormField {
+.logFormField {
   padding: 16px 18px;
 
   background-color: transparent;
@@ -47,7 +48,7 @@
   border: 1px solid rgba(18, 20, 23, 0.1);
 }
 
-.regFormLinkBtn {
+.logFormLinkBtn {
   padding: 16px;
   border-radius: 30px;
   margin-top: 18px;
@@ -59,7 +60,7 @@
   color: var(--btnWhite);
 }
 
-.regFormLink {
+.logFormLink {
   color: rgba(18, 20, 23, 0.5);
   font-size: 16px;
   font-weight: 700;

@@ -1,0 +1,12 @@
+.welcomeContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 812px;
+
+    background-image: url(../../assets/images/bcgPeople.png);
+    background-size: 247px 191px;
+    background-repeat: no-repeat;
+    background-position: center top 64px;
+
+}
