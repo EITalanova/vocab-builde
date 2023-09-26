@@ -1,5 +1,10 @@
+import { Link } from "react-router-dom";
+
 import { Formik, Field, Form, useFormikContext } from "formik";
 import { RegistrSchema } from "../../utils/yup";
+
+import { ReactComponent as ErrorIcon } from "../../assets/svg/login/validationError.svg";
+import { ReactComponent as SuccessIcon } from "../../assets/svg/login/validationSuccess.svg";
 
 import style from "./RegisterForm.module.css";
 
@@ -9,13 +14,27 @@ const InputField = ({ name, placeholder, type }) => {
 
   return (
     <>
+      {/* <div className={style.regForm}> */}
       <Field
         className={style.regFormField}
         type={type}
         name={name}
         placeholder={placeholder}
       />
-      {touched[name] && error && <div className="error-message">{error}</div>}
+      {touched[name] && error && (
+        <div className={style.messageError}>
+          <ErrorIcon />
+          <span>{error}</span>
+        </div>
+      )}
+
+      {touched[name] && !error && (
+        <div className={style.messageSuccess}>
+          <SuccessIcon />
+          <span> Success {name}</span>
+        </div>
+      )}
+      {/* </div> */}
     </>
   );
 };
@@ -51,9 +70,9 @@ export const RegisterForm = () => {
             </button>
           </Form>
         </Formik>
-        <a className={style.regFormLink} href="#">
+        <Link className={style.regFormLink} to="/login">
           Login
-        </a>
+        </Link>
       </div>
     </>
   );

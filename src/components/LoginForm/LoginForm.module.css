@@ -11,7 +11,7 @@
 
 .logFormTextBox {
   text-align: start;
-    margin-bottom: 24px;
+  margin-bottom: 24px;
 
   font-size: 18px;
   font-weight: 500;
@@ -35,17 +35,35 @@
 
 .logFormBox {
   display: flex;
+
   width: 100%;
   flex-direction: column;
   gap: 14px;
 }
 
 .logFormField {
+  font-size: 16px;
+
+  font-weight: 400;
+  line-height: calc(24 / 16);
   padding: 16px 18px;
 
   background-color: transparent;
   border-radius: 15px;
   border: 1px solid rgba(18, 20, 23, 0.1);
+}
+
+.logFormPassword {
+  position: relative;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+
+.logFormEye {
+  position: absolute;
+  top: 18px;
+  right: 18px;
 }
 
 .logFormLinkBtn {
@@ -65,4 +83,26 @@
   font-size: 16px;
   font-weight: 700;
   line-height: calc(24 / 16);
+}
+
+.messageError {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: calc(18 / 12);
+  letter-spacing: 0.12px;
+  color: #d80027;
+}
+
+.messageSuccess {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: calc(18 / 12);
+  letter-spacing: 0.12px;
+  color: rgba(60, 191, 97, 1);
 }

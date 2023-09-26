@@ -1,7 +1,15 @@
+import { Link } from "react-router-dom";
+
 import { Formik, Field, Form, useFormikContext } from "formik";
 import { RegistrSchema } from "../../utils/yup";
 
+import { ReactComponent as ErrorIcon } from "../../assets/svg/login/validationError.svg";
+import { ReactComponent as SuccessIcon } from "../../assets/svg/login/validationSuccess.svg";
+import { ReactComponent as VisibleIcon } from "../../assets/svg/login/visible.svg";
+import { ReactComponent as InvisibleIcon } from "../../assets/svg/login/invisible.svg";
+
 import style from "./LoginForm.module.css";
+import { useState } from "react";
 
 const InputField = ({ name, placeholder, type }) => {
   const { errors, touched } = useFormikContext();
@@ -15,12 +23,30 @@ const InputField = ({ name, placeholder, type }) => {
         name={name}
         placeholder={placeholder}
       />
-      {touched[name] && error && <div className="error-message">{error}</div>}
+      {touched[name] && error && (
+        <div className={style.messageError}>
+          <ErrorIcon />
+          <span>{error}</span>
+        </div>
+      )}
+
+      {touched[name] && !error && (
+        <div className={style.messageSuccess}>
+          <SuccessIcon />
+          <span> Success {name}</span>
+        </div>
+      )}
     </>
   );
 };
 
 export const LoginForm = () => {
+  const [passwordVisibility, setPasswordVisibility] = useState(false);
+
+  const changePasswordVisibility = () => {
+    setPasswordVisibility(!passwordVisibility);
+  };
+
   return (
     <>
       <div className={style.logFormContainer}>
@@ -42,16 +68,28 @@ export const LoginForm = () => {
         >
           <Form className={style.logFormBox}>
             <InputField type="email" name="email" placeholder="Email" />
-            <InputField name="password" placeholder="Password" />
+            <div className={style.logFormPassword}>
+              <InputField
+                type={passwordVisibility ? "text" : "password"}
+                name="password"
+                placeholder="Password"
+              />
+              <button
+                className={style.logFormEye}
+                onClick={changePasswordVisibility}
+              >
+                {passwordVisibility ? <InvisibleIcon /> : <VisibleIcon />}
+              </button>
+            </div>
 
             <button className={style.logFormLinkBtn} type="submit">
               Login
             </button>
           </Form>
         </Formik>
-        <a className={style.logFormLink} href="#">
+        <Link className={style.logFormLink} to="/register">
           Register
-        </a>
+        </Link>
       </div>
     </>
   );
