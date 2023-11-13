@@ -7,6 +7,8 @@ import { ReactComponent as ErrorIcon } from "../../assets/svg/login/validationEr
 import { ReactComponent as SuccessIcon } from "../../assets/svg/login/validationSuccess.svg";
 
 import style from "./RegisterForm.module.css";
+import { useDispatch } from "react-redux";
+import { register } from "../../redux/auth/authThunk";
 
 const InputField = ({ name, placeholder, type }) => {
   const { errors, touched } = useFormikContext();
@@ -40,6 +42,21 @@ const InputField = ({ name, placeholder, type }) => {
 };
 
 export const RegisterForm = () => {
+  const dispatch = useDispatch();
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const form = e.currentTarget;
+    dispatch(
+      register({
+        name: form.elements.name.value,
+        email: form.elements.email.value,
+        password: form.elements.password.value,
+      })
+    );
+    form.reset();
+  };
+
   return (
     <>
       <div className={style.regFormContainer}>
@@ -60,7 +77,9 @@ export const RegisterForm = () => {
             }, 1000);
           }}
         >
-          <Form className={style.regFormBox}>
+          <Form className={style.regFormBox}
+          onSubmit={handleSubmit}
+          >
             <InputField name="name" placeholder="Name" />
             <InputField type="email" name="email" placeholder="Email" />
             <InputField name="password" placeholder="Password" />
