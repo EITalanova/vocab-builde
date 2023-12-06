@@ -1,0 +1,42 @@
+.logoBox {
+  display: flex;
+  gap: 16px;
+}
+
+.logoText {
+  color: #121417;
+  font-family: MacPaw Fixel Display;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: calc(32 / 22);
+}
+
+.btnHeader {
+  display: flex;
+  gap: 28px;
+
+  color: #121417;
+  font-family: MacPaw Fixel Display;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.btnHeaderActive {
+  color: #fcfcfc;
+  border-radius: 15px;
+  background: #85aa9f;
+}
+
+.userBox {
+  display: flex;
+  gap: 16px;
+}
+
+.userIcon {
+  width: 38px;
+  height: 48px;
+
+  border-radius: 30px;
+  background: #85aa9f;
+}
