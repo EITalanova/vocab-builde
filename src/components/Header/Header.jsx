@@ -1,12 +1,23 @@
-import { useAuth } from "../../hooks/useAuth"
+import { useAuth } from "../../hooks/useAuth";
 
 export const Header = () => {
-    const { isLoggedIn } = useAuth();
+  const { isLoggedIn } = useAuth();
 
-    return (
-        <header>
-            {isLoggedIn ? <p>OK</p> : <p>NO</p>
-    }
-       </header> 
-    )
-}
+  return (
+    <header>
+      {isLoggedIn ? <p>OK</p> : <p>NO</p>}
+      <div>
+        {" "}
+        <p></p>
+      </div>
+      <div>
+        <button></button>
+        <button></button>
+        <button></button>
+      </div>
+      <div>
+        <p></p>
+      </div>
+    </header>
+  );
+};
