@@ -5,7 +5,6 @@ import { ReactComponent as User } from "../../assets/header/user.svg";
 
 import style from "./Header.module.css";
 
-
 export const Header = () => {
   const { isLoggedIn } = useAuth();
 
