@@ -3,7 +3,7 @@ import { createAsyncThunk } from "@reduxjs/toolkit";
 
 axios.defaults.baseURL = "https://vocab-builder-backend.p.goit.global/api";
 
-const aetAuthHeader = (token) => {
+const setAuthHeader = (token) => {
   axios.defaults.headers.common.Authorization = `Bearer ${token}`;
 };
 
@@ -16,6 +16,7 @@ export const register = createAsyncThunk(
   async (credrntials, thunkAPI) => {
     try {
       const res = await axios.post("/users/signup", credrntials);
+      setAuthHeader(res.data.token);
       return res.data;
     } catch (e) {
       return thunkAPI.rejectWithValue(e.message);

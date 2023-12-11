@@ -1,9 +1,11 @@
 import { lazy } from "react";
 import { Routes, Route } from "react-router-dom";
 
-// import { PrivateRoute } from "../hoc/PrivateRoute";
+import { PrivateRoute } from "../hooks/PrivateRoute";
+import { PublicRoute } from "../hooks/PublicRoute";
 
 import { Layout } from "./Layout/Layout";
+import { Header } from "./Header/Header";
 
 import "../css/App.css";
 
@@ -21,9 +23,9 @@ function App() {
         <Route
           index
           element={
-            // <PrivateRoute>
+            <PrivateRoute>
             <Main />
-            // </PrivateRoute>
+            </PrivateRoute>
           }
         />
       
@@ -31,9 +33,9 @@ function App() {
       <Route
           path="/register"
           element={
-            // <PrivateRoute>
+            <PublicRoute>
             <Register />
-            // </PrivateRoute>
+            </PublicRoute>
           }
         />
     
@@ -47,6 +49,9 @@ function App() {
           }
         />
       </Route>
+
+
+
     </Routes>
   );
 }
