@@ -1,4 +1,6 @@
 
+import { Link } from "react-router-dom";
+
 import { ReactComponent as Logo } from "../../assets/svg/logo.svg";
 import { ReactComponent as User } from "../../assets/svg/header/user.svg";
 
@@ -23,9 +25,9 @@ export const Header = () => {
       </div>
 
       <div className={style.btnHeader}>
-        <button className={style.btn}>Dictionary</button>
-        <button className={style.btn}>Recommend</button>
-        <button className={style.btn}>Training</button>
+        <Link className={style.btn} to="/dictionary">Dictionary</Link>
+        <Link className={style.btn} to="/recommend">Recommend</Link>
+        <Link className={style.btn} to="/training">Training</Link>
       </div>
 
       <div className={style.userBox}>
