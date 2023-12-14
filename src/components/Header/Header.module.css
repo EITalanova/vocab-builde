@@ -39,6 +39,12 @@
   display: flex;
   gap: 16px;
   align-items: center;
+
+  color: #121417;
+
+  font-size: 20px;
+  font-weight: 500;
+  line-height: normal;
 }
 
 .userIcon {

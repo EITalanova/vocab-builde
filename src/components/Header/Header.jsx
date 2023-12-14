@@ -12,7 +12,6 @@ export const Header = () => {
   const { user } = useAuth();
 
    if (!user) {
-    // You can handle the case when user is null or not fully loaded
     return <p>Loading...</p>;
   }
 
