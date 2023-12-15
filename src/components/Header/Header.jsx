@@ -17,8 +17,31 @@ export const Header = () => {
 
   return (
     <header className={style.header}>
+      {/* <div className={style.headerBox}>
+        <p>Portfolio</p>
+        <ul className={style.menu}>
+          <li><div className={style.userIconQ}>
+          <User />
+        </div></li>
+          <li><div className={style.userIconQ}>
+          <User />
+        </div></li>
+          <li><div className={style.userIconQ}>
+          <User />
+        </div></li>
+        </ul>
+        <p>g</p>
+      </div>
+      
+      <div className={style.box}>
+        <div className={style.card}>f</div>
+        <div className={style.card}></div>
+        <div className={style.card}></div>
+      </div> */}
+      
 
-      <div className={style.logoBox}>
+
+      {/* <div className={style.logoBox}>
         <Logo />
         <p className={style.logoText}>VocabBuilder</p>
       </div>
@@ -34,7 +57,7 @@ export const Header = () => {
         <div className={style.userIcon}>
           <User />
         </div>
-      </div>
+      </div> */}
     </header>
   );
 };
