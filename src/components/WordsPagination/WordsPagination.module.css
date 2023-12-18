@@ -1,0 +1,113 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.logoBox {
+  display: flex;
+  gap: 16px;
+}
+
+.logoText {
+  color: #121417;
+  font-family: MacPaw Fixel Display;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: calc(32 / 22);
+}
+
+.btnHeader {
+  display: flex;
+  gap: 28px;
+
+  color: #121417;
+  font-family: MacPaw Fixel Display;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.btnHeaderActive {
+  color: #fcfcfc;
+  border-radius: 15px;
+  background: #85aa9f;
+}
+
+.userBox {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+
+  color: #121417;
+
+  font-size: 20px;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.userIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+
+  border-radius: 30px;
+  background: #85aa9f;
+}
+
+/* .headerBox {
+display: flex;
+position: relative;
+justify-content: space-between;
+width: 100%;
+height: 50px;
+background: linear-gradient(to right, #8089DF, #000052);
+border-radius: 25px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1),
+  0 4px 8px rgba(0, 0, 0, 0.2);
+
+}
+
+.menu {
+  display: flex;
+  gap: 20px;
+  position: absolute;
+  top: 4px;
+  left: 250px;
+}
+
+
+
+.userIconQ {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 47px;
+  height: 47px;
+
+  border-radius: 50%;
+  border: 4px solid rgb(229, 230, 239);
+  background: #00079A;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1),
+      0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.box {
+  display: flex;
+  gap: 20px;
+  position: absolute;
+  top: 130px;
+}
+
+.card {
+background-color: #8089DF;
+border-radius: 20px;
+width: 200px;
+height: 200px;
+border: 14px solid #c6cdecb4;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1),
+    0 4px 18px rgba(0, 0, 0, 0.2);
+} */
