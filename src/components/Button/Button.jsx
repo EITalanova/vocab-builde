@@ -1,10 +1,10 @@
-
 import style from "./Button.module.css";
 
-export const Button = () => {
+export const Button = ({ text, style }) => {
   return (
     <div className={style.ButtonBox}>
-    Button
+      <button>{text}</button>
+      Button
     </div>
   );
 };

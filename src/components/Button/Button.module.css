@@ -1,6 +1,25 @@
-.modalBox {
-  padding: 0 64px;
+.btn {
+  padding: 14px 0;
   border-radius: 30px;
-  background: #85aa9f;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 28px;
+}
+
+.btnGreen {
   color: #fcfcfc;
+  background: #85aa9f;
+  border: 1px solid rgba(252, 252, 252, 0.4);
+}
+
+.btnSubmitWhite {
+  color: #121417;
+  background: #fcfcfc;
+}
+
+.btnCancelWhite {
+  color: #85aa9f;
+  background: #fcfcfc;
+  border: 1px solid #85aa9f;
 }
