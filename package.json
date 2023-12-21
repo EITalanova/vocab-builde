@@ -8,6 +8,7 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "axios": "^1.4.0",
+    "classnames": "^2.3.2",
     "formik": "^2.4.5",
     "i18next": "^22.5.0",
     "lord-icon-element": "^4.1.1",

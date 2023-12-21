@@ -1,10 +1,14 @@
+import cn from "classnames";
+
 import style from "./Button.module.css";
 
-export const Button = ({ text, style }) => {
+export const Button = ({ type, text, style, width }) => {
   return (
-    <div className={style.ButtonBox}>
-      <button>{text}</button>
-      Button
-    </div>
+    <button
+      className={`cn(style.btn, style.${style}, style.${width})`}
+      type={type}
+    >
+      {text}
+    </button>
   );
 };
