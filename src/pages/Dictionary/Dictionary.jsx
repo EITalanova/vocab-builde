@@ -7,6 +7,8 @@ import style from "./Dictionary.module.css";
 const Dictionary = () => {
   return (
     <div>
+      <p>fffff</p>
+      Dictionary
       <Dashboard />
       <WordsTable />
       <WordsPagination />

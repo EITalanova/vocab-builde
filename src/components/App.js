@@ -10,7 +10,7 @@ import { Header } from "./Header/Header";
 import "../css/App.css";
 
 const Main = lazy(() => import("../pages/Main"));
-// const Dictionary = lazy(() => import("../pages/Dictionary"));
+const Dictionary = lazy(() => import("../pages/Dictionary"));
 const Login = lazy(() => import("../pages/Login/Login"));
 // const Recomend = lazy(() => import("../pages/Recomend"));
 const Register = lazy(() => import("../pages/Register/Register"));
@@ -24,23 +24,21 @@ function App() {
           index
           element={
             <PrivateRoute>
-            <Main />
+              <Main />
             </PrivateRoute>
           }
         />
-      
 
-      <Route
+        <Route
           path="/register"
           element={
             <PublicRoute>
-            <Register />
+              <Register />
             </PublicRoute>
           }
         />
-    
-    
-    <Route
+
+        <Route
           path="/login"
           element={
             // <PrivateRoute>
@@ -48,10 +46,15 @@ function App() {
             // </PrivateRoute>
           }
         />
+        <Route
+          path="/dictionary"
+          element={
+            // <PrivateRoute>
+            <Dictionary />
+            // </PrivateRoute>
+          }
+        />
       </Route>
-
-
-
     </Routes>
   );
 }
