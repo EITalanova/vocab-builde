@@ -1,8 +1,9 @@
 import { Dashboard } from "../../components/Dashboard/Dashboard";
 import { WordsPagination } from "../../components/WordsPagination/WordsPagination";
 import { WordsTable } from "../../components/WordsTable/WordsTable";
+import { Button } from "../../components/Button/Button";
 
-import style from "./Dictionary.module.css";
+// import style from "./Dictionary.module.css";
 
 const Dictionary = () => {
   return (
@@ -12,6 +13,8 @@ const Dictionary = () => {
       <Dashboard />
       <WordsTable />
       <WordsPagination />
+      <Button />
+      <Button />
     </div>
   );
 };
