@@ -7,6 +7,7 @@ export const Modal = ({ children }) => {
     <div className={style.modalBox}>
       <Close />
       {children}
+      
     </div>
   );
 };
