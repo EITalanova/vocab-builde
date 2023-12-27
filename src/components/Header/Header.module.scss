@@ -1,12 +1,19 @@
+@import "../../css/mixins.scss";
+
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 0;
+  padding: 16px;
+
+  @include tablet {
+    padding: 20px 0;
+  }
 }
 
 .logoBox {
   display: flex;
+  align-items: center;
   gap: 16px;
 }
 
@@ -16,17 +23,27 @@
   font-size: 18px;
   font-weight: 600;
   line-height: calc(24 / 18);
+
+  @include tablet {
+    font-size: 22px;
+      font-weight: 600;
+      line-height: calc(32 / 22);
+  }
 }
 
 .btnHeader {
-  display: flex;
-  gap: 28px;
+  display: none;
 
-  color: #121417;
-  font-family: MacPaw Fixel Display;
-  font-size: 14px;
-  font-weight: 500;
-  line-height: normal;
+  @include desktop {
+    display: flex;
+    gap: 28px;
+
+    color: #121417;
+    font-family: MacPaw Fixel Display;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: normal;
+  }
 }
 
 .btnHeaderActive {
@@ -37,25 +54,64 @@
 
 .userBox {
   display: flex;
-  gap: 16px;
   align-items: center;
+  gap: 8px;
 
-  color: #121417;
-
-  font-size: 20px;
+  font-size: 16px;
+  font-style: normal;
   font-weight: 500;
-  line-height: normal;
+  line-height: calc(24 / 16);
+
+  @include tablet {
+    gap: 10px;
+    align-items: center;
+
+    color: #121417;
+    font-size: 20px;
+  }
 }
 
 .userIcon {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 48px;
-  height: 48px;
+  width: 36px;
+  height: 36px;
 
   border-radius: 30px;
   background: #85aa9f;
+
+  @include tablet {
+    width: 48px;
+    height: 48px;
+  }
+}
+
+.user {
+  width: 20px;
+  height: 20px;
+
+  @include tablet {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+
+  @include tablet {
+    width: 40px;
+    height: 28px;
+  }
+
+  @include desktop {
+    display: none;
+  }
 }
 
 /* .headerBox {

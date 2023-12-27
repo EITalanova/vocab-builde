@@ -10,14 +10,8 @@
     }
 }
 
-@mixin lessTablet {
-    @media screen and (max-width: 767px) {
-        @content;
-    }
-}
-
-@mixin desctop {
-    @media screen and (max-width: 1440px) {
+@mixin desktop {
+    @media screen and (min-width: 1440px) {
         @content;
     }
 }

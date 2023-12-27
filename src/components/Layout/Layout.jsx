@@ -5,7 +5,7 @@ import { useAuth } from "../../hooks/useAuth";
 import { Header } from "../Header/Header";
 
 
-import style from "./Layout.module.css";
+import style from "./Layout.module.scss";
 
 
 export const Layout = () => {

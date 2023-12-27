@@ -2,10 +2,11 @@ import { Link } from "react-router-dom";
 
 import { ReactComponent as Logo } from "../../assets/svg/logo.svg";
 import { ReactComponent as User } from "../../assets/svg/header/user.svg";
+import { ReactComponent as Menu } from "../../assets/svg/header/menu.svg";
 
 import { useAuth } from "../../hooks/useAuth";
 
-import style from "./Header.module.css";
+import style from "./Header.module.scss";
 
 export const Header = () => {
   const { user, isLoggedIn } = useAuth();
@@ -60,8 +61,11 @@ export const Header = () => {
           <div className={style.userBox}>
             <p>{user.name}</p>
             <div className={style.userIcon}>
-              <User />
+              <User className={style.user} />
             </div>
+            <button className={style.menu}>
+              <Menu/>
+            </button>
           </div>
         </>
       )}
