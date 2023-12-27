@@ -1,4 +1,3 @@
-
 import { Link } from "react-router-dom";
 
 import { ReactComponent as Logo } from "../../assets/svg/logo.svg";
@@ -9,9 +8,9 @@ import { useAuth } from "../../hooks/useAuth";
 import style from "./Header.module.css";
 
 export const Header = () => {
-  const { user } = useAuth();
+  const { user, isLoggedIn } = useAuth();
 
-   if (!user) {
+  if (!user) {
     return <p>Loading...</p>;
   }
 
@@ -38,26 +37,34 @@ export const Header = () => {
         <div className={style.card}></div>
         <div className={style.card}></div>
       </div> */}
-      
 
-
-      {/* <div className={style.logoBox}>
+      <div className={style.logoBox}>
         <Logo />
         <p className={style.logoText}>VocabBuilder</p>
       </div>
 
-      <div className={style.btnHeader}>
-        <Link className={style.btn} to="/dictionary">Dictionary</Link>
-        <Link className={style.btn} to="/recommend">Recommend</Link>
-        <Link className={style.btn} to="/training">Training</Link>
-      </div>
+      {isLoggedIn && (
+        <>
+          <div className={style.btnHeader}>
+            <Link className={style.btn} to="/dictionary">
+              Dictionary
+            </Link>
+            <Link className={style.btn} to="/recommend">
+              Recommend
+            </Link>
+            <Link className={style.btn} to="/training">
+              Training
+            </Link>
+          </div>
 
-      <div className={style.userBox}>
-        <p>{user.name}</p>
-        <div className={style.userIcon}>
-          <User />
-        </div>
-      </div> */}
+          <div className={style.userBox}>
+            <p>{user.name}</p>
+            <div className={style.userIcon}>
+              <User />
+            </div>
+          </div>
+        </>
+      )}
     </header>
   );
 };

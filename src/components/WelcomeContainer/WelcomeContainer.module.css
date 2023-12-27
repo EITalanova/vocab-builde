@@ -1,24 +1,12 @@
 .welcomeContainer {
-    display: flex;
-    position: relative;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 812px;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 812px;
 
-    background-image: url(../../assets/images/bcgPeople.png);
-    background-size: 247px 191px;
-    background-repeat: no-repeat;
-    background-position: center top 64px;
-
-}
-
-.regFormHeader {
-    display: flex;
-    align-items: center;
-    padding: 16px;
-    gap: 16px;
-
-    font-size: 18px;
-    font-weight: 600;
-    line-height: calc(24/18);
+  background-image: url(../../assets/images/bcgPeople.png);
+  background-size: 247px 191px;
+  background-repeat: no-repeat;
+  background-position: center top 64px;
 }
