@@ -13,9 +13,9 @@
 .logoText {
   color: #121417;
   font-family: MacPaw Fixel Display;
-  font-size: 22px;
+  font-size: 18px;
   font-weight: 600;
-  line-height: calc(32 / 22);
+  line-height: calc(24 / 18);
 }
 
 .btnHeader {
