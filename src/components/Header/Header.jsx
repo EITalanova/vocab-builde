@@ -59,12 +59,12 @@ export const Header = () => {
           </div>
 
           <div className={style.userBox}>
-            <p>{user.name}</p>
+            <p className={style.userText}>{user.name}</p>
             <div className={style.userIcon}>
               <User className={style.user} />
             </div>
             <button className={style.menu}>
-              <Menu/>
+              <Menu className={style.menuF}/>
             </button>
           </div>
         </>
