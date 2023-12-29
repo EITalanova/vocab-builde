@@ -1,5 +1,6 @@
 .regFormContainer {
   display: flex;
+  min-width: 320px;
   flex-direction: column;
   gap: 16px;
   align-items: center;
