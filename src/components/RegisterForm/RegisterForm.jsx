@@ -6,7 +6,7 @@ import { RegistrSchema } from "../../utils/yup";
 import { ReactComponent as ErrorIcon } from "../../assets/svg/login/validationError.svg";
 import { ReactComponent as SuccessIcon } from "../../assets/svg/login/validationSuccess.svg";
 
-import style from "./RegisterForm.module.css";
+import style from "./RegisterForm.module.scss";
 import { useDispatch } from "react-redux";
 import { register } from "../../redux/auth/authThunk";
 

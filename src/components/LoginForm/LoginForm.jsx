@@ -8,7 +8,7 @@ import { ReactComponent as SuccessIcon } from "../../assets/svg/login/validation
 import { ReactComponent as VisibleIcon } from "../../assets/svg/login/visible.svg";
 import { ReactComponent as InvisibleIcon } from "../../assets/svg/login/invisible.svg";
 
-import style from "./LoginForm.module.css";
+import style from "./LoginForm.module.scss";
 import { useState } from "react";
 
 const InputField = ({ name, placeholder, type }) => {
