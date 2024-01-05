@@ -10,27 +10,27 @@ export const WordsTable = () => {
     <div>
       <table>
         <thead>
-          <tr>
+          <th>
             Word
             <Eng />
-          </tr>
-          <tr>
+          </th>
+          <th>
             Translation
             <Ua />
-          </tr>
-          <tr>Category</tr>
-          <tr>Progress</tr>
-          <tr></tr>
+          </th>
+          <th>Category</th>
+          <th>Progress</th>
+          <th></th>
         </thead>
 
         <tbody>
-          {table.map((el) => {
+          {table.map((el) => (
             <tr key={el.word + el.translation}>
               <td>{el.word}</td>
               <td>{el.translation}</td>
               <td>{el.category}</td>
-            </tr>;
-          })}
+            </tr>
+          ))}
         </tbody>
       </table>
       WordsTable
