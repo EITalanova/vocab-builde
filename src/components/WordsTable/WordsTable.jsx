@@ -23,7 +23,7 @@ export const WordsTable = () => {
           <th></th>
         </thead>
 
-        <tbody>
+        {/* <tbody>
           {table.map((el) => (
             <tr key={el.word + el.translation}>
               <td>{el.word}</td>
@@ -31,7 +31,7 @@ export const WordsTable = () => {
               <td>{el.category}</td>
             </tr>
           ))}
-        </tbody>
+        </tbody> */}
       </table>
       WordsTable
     </div>
